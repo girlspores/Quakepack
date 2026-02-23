@@ -1,5 +1,13 @@
 #fl
 forceload add 25 24 -11 -8
+forceload add 634 -111 382 101
+
+
+
+
+
+
+
 #map manager
 #gm
 # Debug tick
@@ -12,6 +20,8 @@ effect give @a saturation 1 20 true
 
 # gun tick
 execute if data storage cmd:global {gameState_apex:1} run function cmd:g/map/apex/game/gun/tick
+execute if data storage cmd:global {gameState_ancient:1} run function cmd:g/map/ancient/game/gun/tick
+
 
 #int cleanup
 execute as @e[type=interaction] at @s unless entity @p[distance=..40] run kill @s
@@ -167,3 +177,7 @@ data modify block -2397 43 731 profile set from storage id:data.rank7
 data modify block -2397 43 741 profile set from storage id:data.rank8
 data modify block -2397 42 731 profile set from storage id:data.rank9
 data modify block -2397 42 741 profile set from storage id:data.rank10
+
+
+#gun int cleanup
+execute as @e[type=interaction,tag=rclick] at @s unless entity @p[distance=..3] run kill @s

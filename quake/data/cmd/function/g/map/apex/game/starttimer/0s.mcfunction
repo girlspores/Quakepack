@@ -25,15 +25,15 @@ effect give @a[team=apex] speed infinite 3 true
 
 data modify storage cmd:global gameState_apex set value 1
 
-execute as @a[team=apex,tag=p1] at @e[type=marker,tag=g_spawnpoint,tag=0] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p2] at @e[type=marker,tag=g_spawnpoint,tag=1] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p3] at @e[type=marker,tag=g_spawnpoint,tag=2] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p4] at @e[type=marker,tag=g_spawnpoint,tag=3] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p5] at @e[type=marker,tag=g_spawnpoint,tag=4] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p6] at @e[type=marker,tag=g_spawnpoint,tag=5] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p7] at @e[type=marker,tag=g_spawnpoint,tag=6] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p8] at @e[type=marker,tag=g_spawnpoint,tag=7] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p9] at @e[type=marker,tag=g_spawnpoint,tag=8] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p10] at @e[type=marker,tag=g_spawnpoint,tag=9] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p11] at @e[type=marker,tag=g_spawnpoint,tag=10] run tp @s ^ ^ ^
-execute as @a[team=apex,tag=p12] at @e[type=marker,tag=g_spawnpoint,tag=11] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p1] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=0] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p2] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=1] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p3] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=2] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p4] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=3] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p5] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=4] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p6] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=5] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p7] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=6] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p8] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=7] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p9] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=8] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p10] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=9] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p11] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=10] run tp @s ^ ^ ^
+execute as @a[team=apex,tag=p12] at @e[tag=apex,type=marker,tag=g_spawnpoint,tag=11] run tp @s ^ ^ ^

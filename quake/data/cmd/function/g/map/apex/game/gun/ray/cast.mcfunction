@@ -3672,26 +3672,7 @@ execute as @a[tag=!spawnProt,tag=!p9,team=apex] at @s positioned ~ ~1 ~ if entit
 execute as @a[tag=!spawnProt,tag=!p10,team=apex] at @s positioned ~ ~1 ~ if entity @e[tag=ray,tag=p10,distance=..1] run tag @s add p10_die
 execute as @a[tag=!spawnProt,tag=!p11,team=apex] at @s positioned ~ ~1 ~ if entity @e[tag=ray,tag=p11,distance=..1] run tag @s add p11_die
 execute as @a[tag=!spawnProt,tag=!p12,team=apex] at @s positioned ~ ~1 ~ if entity @e[tag=ray,tag=p12,distance=..1] run tag @s add p12_die
-################################
-# count kills this shot
-scoreboard objectives add multikill.Apex
-scoreboard players set @a multikill.Apex 0
-execute as @a[tag=p1_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p2_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p3_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p4_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p5_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p6_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p7_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p8_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p9_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p10_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p11_killed,team=apex] run scoreboard players add @s multikill.Apex 1
-execute as @a[tag=p12_killed,team=apex] run scoreboard players add @s multikill.Apex 1
 
-# detect multi-kill
-execute as @a[team=apex] if score @s multikill.Apex matches 2.. run tellraw @a[team=apex] [{"selector":"@s","color":"aqua"},{"text":" got a MULTI-KILL!","color":"gold"}]
-###############################
 execute if entity @a[team=apex,tag=p1_die] run tag @p[team=apex,tag=p1] add p1_killed
 execute if entity @a[team=apex,tag=p2_die] run tag @p[team=apex,tag=p2] add p2_killed
 execute if entity @a[team=apex,tag=p3_die] run tag @p[team=apex,tag=p3] add p3_killed
@@ -3704,7 +3685,31 @@ execute if entity @a[team=apex,tag=p9_die] run tag @p[team=apex,tag=p9] add p9_k
 execute if entity @a[team=apex,tag=p10_die] run tag @p[team=apex,tag=p10] add p10_killed
 execute if entity @a[team=apex,tag=p11_die] run tag @p[team=apex,tag=p11] add p11_killed
 execute if entity @a[team=apex,tag=p12_die] run tag @p[team=apex,tag=p12] add p12_killed
+################################
+# count kills this shot
+scoreboard objectives add multikill.Apex dummy
+scoreboard players set @a multikill.Apex 0
+execute as @a[tag=p1_die,team=apex] run scoreboard players add @p[tag=p1,team=apex] multikill.Apex 1
+execute as @a[tag=p2_die,team=apex] run scoreboard players add @p[tag=p2,team=apex] multikill.Apex 1
+execute as @a[tag=p3_die,team=apex] run scoreboard players add @p[tag=p3,team=apex] multikill.Apex 1
+execute as @a[tag=p4_die,team=apex] run scoreboard players add @p[tag=p4,team=apex] multikill.Apex 1
+execute as @a[tag=p5_die,team=apex] run scoreboard players add @p[tag=p5,team=apex] multikill.Apex 1
+execute as @a[tag=p6_die,team=apex] run scoreboard players add @p[tag=p6,team=apex] multikill.Apex 1
+execute as @a[tag=p7_die,team=apex] run scoreboard players add @p[tag=p7,team=apex] multikill.Apex 1
+execute as @a[tag=p8_die,team=apex] run scoreboard players add @p[tag=p8,team=apex] multikill.Apex 1
+execute as @a[tag=p9_die,team=apex] run scoreboard players add @p[tag=p9,team=apex] multikill.Apex 1
+execute as @a[tag=p10_die,team=apex] run scoreboard players add @p[tag=p10,team=apex] multikill.Apex 1
+execute as @a[tag=p11_die,team=apex] run scoreboard players add @p[tag=p11,team=apex] multikill.Apex 1
+execute as @a[tag=p12_die,team=apex] run scoreboard players add @p[tag=p12,team=apex] multikill.Apex 1
 
+# detect multi-kill
+execute as @a[team=apex] if score @s multikill.Apex matches 2 run tellraw @a[team=apex] [{"text":"DOUBLE KILL!","color":"red","bold":true,"italic":true}]
+execute as @a[team=apex] if score @s multikill.Apex matches 3 run tellraw @a[team=apex] [{"text":"TRIPLE KILL!","color":"red","bold":true,"italic":true}]
+execute as @a[team=apex] if score @s multikill.Apex matches 4 run tellraw @a[team=apex] [{"text":"QUADKILL!","color":"red","bold":true,"italic":true}]
+execute as @a[team=apex] if score @s multikill.Apex matches 5 run tellraw @a[team=apex] [{"text":"PENTAKILL!","color":"red","bold":true,"italic":true}]
+execute as @a[team=apex] if score @s multikill.Apex matches 6.. run tellraw @a[team=apex] [{"text":"ULTRAKILL!","color":"red","bold":true,"italic":true}]
+
+###############################
 #debug says
 #execute as @p[tag=p1_die] run say im p1 and i have died
 #execute as @p[tag=p1_killed] run say im p1 and i have gotten a kill

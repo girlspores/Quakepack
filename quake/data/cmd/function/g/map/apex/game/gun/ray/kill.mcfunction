@@ -17,70 +17,70 @@
 #execute as @p[tag=p2_killed] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
 #execute as @p[tag=p1_die] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
 #execute as @p[tag=p2_die] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
-execute if entity @a[tag=p1_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p1]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p1_die]"}]
-execute if entity @a[tag=p2_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p2]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p2_die]"}]
-execute if entity @a[tag=p3_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p3]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p3_die]"}]
-execute if entity @a[tag=p4_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p4]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p4_die]"}]
-execute if entity @a[tag=p5_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p5]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p5_die]"}]
-execute if entity @a[tag=p6_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p6]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p6_die]"}]
-execute if entity @a[tag=p7_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p7]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p7_die]"}]
-execute if entity @a[tag=p8_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p8]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p8_die]"}]
-execute if entity @a[tag=p9_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p9]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p9_die]"}]
-execute if entity @a[tag=p10_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p10]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p10_die]"}]
-execute if entity @a[tag=p11_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p11]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p11_die]"}]
-execute if entity @a[tag=p12_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p12]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@a[tag=p12_die]"}]
+execute as @a[tag=p1_die,team=apex] if entity @a[tag=p1_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p1]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p1_die]"}]
+execute as @a[tag=p2_die,team=apex] if entity @a[tag=p2_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p2]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p2_die]"}]
+execute as @a[tag=p3_die,team=apex] if entity @a[tag=p3_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p3]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p3_die]"}]
+execute as @a[tag=p4_die,team=apex] if entity @a[tag=p4_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p4]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p4_die]"}]
+execute as @a[tag=p5_die,team=apex] if entity @a[tag=p5_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p5]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p5_die]"}]
+execute as @a[tag=p6_die,team=apex] if entity @a[tag=p6_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p6]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p6_die]"}]
+execute as @a[tag=p7_die,team=apex] if entity @a[tag=p7_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p7]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p7_die]"}]
+execute as @a[tag=p8_die,team=apex] if entity @a[tag=p8_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p8]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p8_die]"}]
+execute as @a[tag=p9_die,team=apex] if entity @a[tag=p9_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p9]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p9_die]"}]
+execute as @a[tag=p10_die,team=apex] if entity @a[tag=p10_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p10]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p10_die]"}]
+execute as @a[tag=p11_die,team=apex] if entity @a[tag=p11_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p11]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p11_die]"}]
+execute as @a[tag=p12_die,team=apex] if entity @a[tag=p12_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p12]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p12_die]"}]
 
-execute as @p[tag=!spawnProt,tag=p1_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p2_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p3_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p4_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p5_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p6_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p7_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p8_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p9_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p10_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p11_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p12_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p1_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p2_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p3_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p4_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p5_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p6_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p7_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p8_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p9_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p10_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p11_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p12_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 
-execute as @p[tag=!spawnProt,tag=p1_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p2_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p3_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p4_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p5_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p6_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p7_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p8_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p9_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p10_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p11_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
-execute as @p[tag=!spawnProt,tag=p12_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p1_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p2_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p3_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p4_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p5_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p6_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p7_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p8_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p9_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p10_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p11_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
+execute as @a[tag=!spawnProt,tag=p12_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 
-execute as @p[tag=!spawnProt,tag=p1_die,team=apex] run kill @e[type=interaction,tag=p1,team=apex]
-execute as @p[tag=!spawnProt,tag=p2_die,team=apex] run kill @e[type=interaction,tag=p2,team=apex]
-execute as @p[tag=!spawnProt,tag=p3_die,team=apex] run kill @e[type=interaction,tag=p3,team=apex]
-execute as @p[tag=!spawnProt,tag=p4_die,team=apex] run kill @e[type=interaction,tag=p4,team=apex]
-execute as @p[tag=!spawnProt,tag=p5_die,team=apex] run kill @e[type=interaction,tag=p5,team=apex]
-execute as @p[tag=!spawnProt,tag=p6_die,team=apex] run kill @e[type=interaction,tag=p6,team=apex]
-execute as @p[tag=!spawnProt,tag=p7_die,team=apex] run kill @e[type=interaction,tag=p7,team=apex]
-execute as @p[tag=!spawnProt,tag=p8_die,team=apex] run kill @e[type=interaction,tag=p8,team=apex]
-execute as @p[tag=!spawnProt,tag=p9_die,team=apex] run kill @e[type=interaction,tag=p9,team=apex]
-execute as @p[tag=!spawnProt,tag=p10_die,team=apex] run kill @e[type=interaction,tag=p10,team=apex]
-execute as @p[tag=!spawnProt,tag=p11_die,team=apex] run kill @e[type=interaction,tag=p11,team=apex]
-execute as @p[tag=!spawnProt,tag=p12_die,team=apex] run kill @e[type=interaction,tag=p12,team=apex]
+execute as @a[tag=!spawnProt,tag=p1_die,team=apex] run kill @e[type=interaction,tag=p1,team=apex]
+execute as @a[tag=!spawnProt,tag=p2_die,team=apex] run kill @e[type=interaction,tag=p2,team=apex]
+execute as @a[tag=!spawnProt,tag=p3_die,team=apex] run kill @e[type=interaction,tag=p3,team=apex]
+execute as @a[tag=!spawnProt,tag=p4_die,team=apex] run kill @e[type=interaction,tag=p4,team=apex]
+execute as @a[tag=!spawnProt,tag=p5_die,team=apex] run kill @e[type=interaction,tag=p5,team=apex]
+execute as @a[tag=!spawnProt,tag=p6_die,team=apex] run kill @e[type=interaction,tag=p6,team=apex]
+execute as @a[tag=!spawnProt,tag=p7_die,team=apex] run kill @e[type=interaction,tag=p7,team=apex]
+execute as @a[tag=!spawnProt,tag=p8_die,team=apex] run kill @e[type=interaction,tag=p8,team=apex]
+execute as @a[tag=!spawnProt,tag=p9_die,team=apex] run kill @e[type=interaction,tag=p9,team=apex]
+execute as @a[tag=!spawnProt,tag=p10_die,team=apex] run kill @e[type=interaction,tag=p10,team=apex]
+execute as @a[tag=!spawnProt,tag=p11_die,team=apex] run kill @e[type=interaction,tag=p11,team=apex]
+execute as @a[tag=!spawnProt,tag=p12_die,team=apex] run kill @e[type=interaction,tag=p12,team=apex]
 
-execute as @p[tag=!spawnProt,tag=p1_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p2_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p3_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p4_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p5_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p6_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p7_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p8_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p9_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p10_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p11_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
-execute as @p[tag=!spawnProt,tag=p12_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p1_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p2_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p3_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p4_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p5_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p6_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p7_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p8_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p9_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p10_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p11_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
+execute as @a[tag=!spawnProt,tag=p12_die,team=apex] at @s run function cmd:g/map/apex/game/spawnpoint/respawn
 
 
 execute as @p[tag=p1_killed,team=apex] at @s run scoreboard players add @s kills.Apex 1
