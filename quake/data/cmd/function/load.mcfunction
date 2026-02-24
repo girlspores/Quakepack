@@ -33,7 +33,7 @@ team add woodstone
 team add wynnic
 
 # Reload complete notification
-tellraw @a {"text":"Quakecraft v0.0.3 - Loaded successfully","color":"light_purple"}
+tellraw @a {"text":"Quakecraft v0.0.5 - Loaded successfully","color":"light_purple"}
 execute as @a at @s run playsound minecraft:block.note_block.bell master @s ~ ~ ~
 #gm
 gamemode adventure @a
