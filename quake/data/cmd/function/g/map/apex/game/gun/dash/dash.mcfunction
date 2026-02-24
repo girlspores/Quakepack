@@ -70,7 +70,7 @@ execute as @s[team=apex] at @s run playsound minecraft:entity.bat.takeoff master
 
 # NEW
 
-scoreboard players set $strength player_motion.api.launch 10000
+scoreboard players set $strength player_motion.api.launch 13000
 execute as @s rotated as @s run function player_motion:api/launch_looking
 
 

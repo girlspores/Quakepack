@@ -1,0 +1,15 @@
+{
+  "values": [
+    "minecraft:cobweb",
+    "minecraft:snow",
+    "#minecraft:air",
+    "#minecraft:buttons",
+    "#minecraft:pressure_plates",
+    "minecraft:short_grass",
+    "#minecraft:standing_signs",
+    "#minecraft:wall_signs",
+    "#minecraft:all_signs",
+    "minecraft:torch",
+    "minecraft:wall_torch"
+  ]
+}

@@ -112,19 +112,18 @@ execute as @e[type=interaction,tag=rclick] at @s if data entity @s interaction r
 #gun cd
 function cmd:g/map/apex/game/gun/trigger/tick
 
-#track sprees
-execute as @a[team=apex,tag=p1_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p2_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p3_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p4_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p5_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p6_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p7_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p8_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p9_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p10_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p11_killed] at @s run scoreboard players add @s sprees.Global 1
-execute as @a[team=apex,tag=p12_killed] at @s run scoreboard players add @s sprees.Global 1
+#spree helper
+execute as @a[team=apex,tag=p1_die] at @s run scoreboard players add @p[tag=p1,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p2_die] at @s run scoreboard players add @p[tag=p2,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p3_die] at @s run scoreboard players add @p[tag=p3,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p4_die] at @s run scoreboard players add @p[tag=p4,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p5_die] at @s run scoreboard players add @p[tag=p5,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p6_die] at @s run scoreboard players add @p[tag=p6,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p7_die] at @s run scoreboard players add @p[tag=p7,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p8_die] at @s run scoreboard players add @p[tag=p8,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p9_die] at @s run scoreboard players add @p[tag=p9,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p10_die] at @s run scoreboard players add @p[tag=p10,team=apex] sprees.Global 1
+execute as @a[team=apex,tag=p11_die] at @s run scoreboard players add @p[tag=p11,team=apex] sprees.Global 1
 
 #reset sprees
 execute as @a[tag=spawnProt] if score @s sprees.Global matches 1..30 run scoreboard players set @s sprees.Global 0
