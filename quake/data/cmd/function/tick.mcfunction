@@ -181,3 +181,7 @@ data modify block -2397 42 741 profile set from storage id:data.rank10
 
 #gun int cleanup
 execute as @e[type=interaction,tag=rclick] at @s unless entity @p[distance=..3] run kill @s
+
+
+#worldspawn
+execute positioned -2620.59 -15.00 479.15 as @a[distance=..100] run tp @s -2432.53 41.00 736.50 -449.89 2.18

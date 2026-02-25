@@ -3646,8 +3646,10 @@ execute as @e[tag=ray,tag=p12,tag=r299] at @s if block ~ ~ ~ #minecraft:beam_pas
 execute as @s at @s run playsound minecraft:entity.blaze.hurt master @a ~ ~ ~ 0.5 2
 #beam
 #particle
-execute as @e[tag=ray,tag=p1] at @s unless entity @p[tag=p1,distance=..2] run particle crit ~ ~ ~ 0.025 0.025 0.025 0 10 force @a
-
+execute as @e[tag=ray] at @s unless entity @p[distance=..2] run particle firework ~ ~ ~ 0.025 0.025 0.025 0 10 force @a
+######## DEBUGGING HITBOX HERE #################################################################################################################
+#execute as @a[tag=p2,team=apex] at @s positioned ~ ~ ~ as @e[tag=ray,distance=..1] at @s run summon marker ~ ~ ~ {Tags:["hitboxdebug"]}
+################################################################################################################################################
 execute as @a[tag=!spawnProt,tag=!p1,team=apex] at @s positioned ~ ~ ~ if entity @e[tag=ray,tag=p1,distance=..1] run tag @s add p1_die
 execute as @a[tag=!spawnProt,tag=!p2,team=apex] at @s positioned ~ ~ ~ if entity @e[tag=ray,tag=p2,distance=..1] run tag @s add p2_die
 execute as @a[tag=!spawnProt,tag=!p3,team=apex] at @s positioned ~ ~ ~ if entity @e[tag=ray,tag=p3,distance=..1] run tag @s add p3_die
@@ -3672,6 +3674,24 @@ execute as @a[tag=!spawnProt,tag=!p9,team=apex] at @s positioned ~ ~1 ~ if entit
 execute as @a[tag=!spawnProt,tag=!p10,team=apex] at @s positioned ~ ~1 ~ if entity @e[tag=ray,tag=p10,distance=..1] run tag @s add p10_die
 execute as @a[tag=!spawnProt,tag=!p11,team=apex] at @s positioned ~ ~1 ~ if entity @e[tag=ray,tag=p11,distance=..1] run tag @s add p11_die
 execute as @a[tag=!spawnProt,tag=!p12,team=apex] at @s positioned ~ ~1 ~ if entity @e[tag=ray,tag=p12,distance=..1] run tag @s add p12_die
+
+
+
+#headshot
+execute as @a[tag=!spawnProt,tag=!p1,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p1,distance=..0.25] run tag @s add p1_headshot
+execute as @a[tag=!spawnProt,tag=!p2,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p2,distance=..0.25] run tag @s add p2_headshot
+execute as @a[tag=!spawnProt,tag=!p3,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p3,distance=..0.25] run tag @s add p3_headshot
+execute as @a[tag=!spawnProt,tag=!p4,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p4,distance=..0.25] run tag @s add p4_headshot
+execute as @a[tag=!spawnProt,tag=!p5,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p5,distance=..0.25] run tag @s add p5_headshot
+execute as @a[tag=!spawnProt,tag=!p6,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p6,distance=..0.25] run tag @s add p6_headshot
+execute as @a[tag=!spawnProt,tag=!p7,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p7,distance=..0.25] run tag @s add p7_headshot
+execute as @a[tag=!spawnProt,tag=!p8,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p8,distance=..0.25] run tag @s add p8_headshot
+execute as @a[tag=!spawnProt,tag=!p9,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p9,distance=..0.25] run tag @s add p9_headshot
+execute as @a[tag=!spawnProt,tag=!p10,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p10,distance=..0.25] run tag @s add p10_headshot
+execute as @a[tag=!spawnProt,tag=!p11,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p11,distance=..0.25] run tag @s add p11_headshot
+execute as @a[tag=!spawnProt,tag=!p12,team=apex] at @s positioned ~ ~1.75 ~ if entity @e[tag=ray,tag=p12,distance=..0.25] run tag @s add p12_headshot
+
+
 
 execute if entity @a[team=apex,tag=p1_die] run tag @p[team=apex,tag=p1] add p1_killed
 execute if entity @a[team=apex,tag=p2_die] run tag @p[team=apex,tag=p2] add p2_killed
@@ -3730,5 +3750,19 @@ execute as @e[tag=ray,tag=p9] at @s unless block ~ ~ ~ #minecraft:beam_passthrou
 execute as @e[tag=ray,tag=p10] at @s unless block ~ ~ ~ #minecraft:beam_passthrough run kill @e[tag=ray,tag=p10]
 execute as @e[tag=ray,tag=p11] at @s unless block ~ ~ ~ #minecraft:beam_passthrough run kill @e[tag=ray,tag=p11]
 execute as @e[tag=ray,tag=p12] at @s unless block ~ ~ ~ #minecraft:beam_passthrough run kill @e[tag=ray,tag=p12]
+
+#clean rays 2
+execute as @e[tag=ray,tag=p1,tag=r300] run kill @e[tag=ray,tag=p1]
+execute as @e[tag=ray,tag=p2,tag=r300] run kill @e[tag=ray,tag=p2]
+execute as @e[tag=ray,tag=p3,tag=r300] run kill @e[tag=ray,tag=p3]
+execute as @e[tag=ray,tag=p4,tag=r300] run kill @e[tag=ray,tag=p4]
+execute as @e[tag=ray,tag=p5,tag=r300] run kill @e[tag=ray,tag=p5]
+execute as @e[tag=ray,tag=p6,tag=r300] run kill @e[tag=ray,tag=p6]
+execute as @e[tag=ray,tag=p7,tag=r300] run kill @e[tag=ray,tag=p7]
+execute as @e[tag=ray,tag=p8,tag=r300] run kill @e[tag=ray,tag=p8]
+execute as @e[tag=ray,tag=p9,tag=r300] run kill @e[tag=ray,tag=p9]
+execute as @e[tag=ray,tag=p10,tag=r300] run kill @e[tag=ray,tag=p10]
+execute as @e[tag=ray,tag=p11,tag=r300] run kill @e[tag=ray,tag=p11]
+execute as @e[tag=ray,tag=p12,tag=r300] run kill @e[tag=ray,tag=p12]
 #say cast
 

@@ -74,37 +74,13 @@ execute as @a[tag=p12] at @s positioned ~ ~ ~ run tp @e[type=minecraft:interacti
 #l/r
 #l
 function cmd:g/map/apex/game/gun/dash/tick
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p1] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p2] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p3] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p4] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p5] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p6] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p7] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p8] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p9] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p10] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p11] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p12] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
+execute as @e[tag=apex,type=interaction,tag=rclick] at @s on attacker run function cmd:g/map/apex/game/gun/dash/dash
 
 #r
 function cmd:g/map/apex/game/gun/ray/kill
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p1] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p2] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p3] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p4] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p5] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p6] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p7] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p8] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p9] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p10] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p11] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
-execute as @e[tag=apex,type=interaction,tag=rclick,tag=p12] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
+execute as @e[tag=apex,type=interaction,tag=rclick] at @s on target run function cmd:g/map/apex/game/gun/ray/cast
 
-
-
-execute as @e[tag=g_spawnpoint,tag=apex] at @s run tag @e[type=interaction,distance=..100] add apex
+execute as @e[tag=g_spawnpoint,tag=apex] at @s run tag @e[type=interaction,distance=..200] add apex
 execute as @e[type=interaction,tag=rclick] at @s if data entity @s attack run kill @s
 execute as @e[type=interaction,tag=rclick] at @s if data entity @s interaction run kill @s
 
@@ -132,3 +108,7 @@ execute as @a[tag=!spree2] if score @s sprees.Global matches 10.. run function c
 execute as @a[tag=!spree3] if score @s sprees.Global matches 15.. run function cmd:g/map/apex/game/gun/sprees/3
 execute as @a[tag=!spree4] if score @s sprees.Global matches 20.. run function cmd:g/map/apex/game/gun/sprees/4
 execute as @a[tag=!spree5] if score @s sprees.Global matches 25.. run function cmd:g/map/apex/game/gun/sprees/5
+
+
+
+

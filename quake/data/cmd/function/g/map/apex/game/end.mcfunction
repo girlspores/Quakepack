@@ -1,9 +1,4 @@
 schedule clear cmd:g/map/apex/game/end
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch
-execute as @a at @s run playsound minecraft:entity.firework_rocket.launch
 
 clear @a[team=apex,tag=p1]
 clear @a[team=apex,tag=p2]
@@ -21,7 +16,7 @@ clear @a[team=apex,tag=p12]
 #tellraw @a[team=apex] {"text":"Returning to lobby in 5s... >///< !!","color":"red"}
 
 kill @e[team=apex,type=interaction]
-schedule function cmd:g/map/lobby/warp 5.5s
+schedule function cmd:g/map/lobby/warp 7.5s
 
 #log stats
 execute as @a[team=apex] at @s run scoreboard players operation @s kills.Global += @s kills.Apex
@@ -108,9 +103,16 @@ execute as @a[team=apex] at @s run team leave @s
 kill @e[type=interaction,team=apex]
 data modify storage cmd:global gameState_apex set value 0
 
-tag @a remove apex_rank1
-tag @a remove apex_rank2
-tag @a remove apex_rank3
+execute as @a[tag=ending] at @s run playsound minecraft:entity.firework_rocket.launch
+execute as @a[tag=ending,tag=apex_rank1] at @s run summon firework_rocket ~ ~ ~ {Life:0,LifeTime:20,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"star",has_twinkle:true,colors:[I;16777215],fade_colors:[I;0]}]}}}}
+execute as @a[tag=ending,tag=apex_rank1] at @s run summon firework_rocket ~ ~ ~ {Life:0,LifeTime:20,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"star",has_twinkle:true,colors:[I;16777215],fade_colors:[I;0]}]}}}}
+execute as @a[tag=ending,tag=apex_rank1] at @s run summon firework_rocket ~ ~ ~ {Life:0,LifeTime:20,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"star",has_twinkle:true,colors:[I;16777215],fade_colors:[I;0]}]}}}}
+
+
+
+
+schedule function cmd:g/map/apex/game/end2 1s
+schedule function cmd:g/map/apex/game/end3 2s
 
 
 

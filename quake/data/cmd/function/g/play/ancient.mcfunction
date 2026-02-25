@@ -1,5 +1,6 @@
 # fl
-forceload add 634 -111 382 101
+forceload add 50 37
+forceload add -25 -15
 # team
 team leave @s
 team join ancient @s
@@ -26,6 +27,6 @@ gamemode adventure @s
 
 
 #
-scoreboard objectives add kills.ancient dummy
-scoreboard objectives add respawn.ancient dummy
-scoreboard objectives add spawnProt.ancient dummy
+scoreboard objectives add kills.Ancient dummy
+scoreboard objectives add respawn.Ancient dummy
+scoreboard objectives add spawnProt.Ancient dummy

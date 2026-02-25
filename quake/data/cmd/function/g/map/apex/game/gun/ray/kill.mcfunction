@@ -17,19 +17,46 @@
 #execute as @p[tag=p2_killed] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
 #execute as @p[tag=p1_die] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
 #execute as @p[tag=p2_die] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
-execute as @a[tag=p1_die,team=apex] if entity @a[tag=p1_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p1]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p1_die]"}]
-execute as @a[tag=p2_die,team=apex] if entity @a[tag=p2_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p2]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p2_die]"}]
-execute as @a[tag=p3_die,team=apex] if entity @a[tag=p3_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p3]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p3_die]"}]
-execute as @a[tag=p4_die,team=apex] if entity @a[tag=p4_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p4]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p4_die]"}]
-execute as @a[tag=p5_die,team=apex] if entity @a[tag=p5_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p5]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p5_die]"}]
-execute as @a[tag=p6_die,team=apex] if entity @a[tag=p6_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p6]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p6_die]"}]
-execute as @a[tag=p7_die,team=apex] if entity @a[tag=p7_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p7]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p7_die]"}]
-execute as @a[tag=p8_die,team=apex] if entity @a[tag=p8_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p8]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p8_die]"}]
-execute as @a[tag=p9_die,team=apex] if entity @a[tag=p9_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p9]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p9_die]"}]
-execute as @a[tag=p10_die,team=apex] if entity @a[tag=p10_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p10]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p10_die]"}]
-execute as @a[tag=p11_die,team=apex] if entity @a[tag=p11_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p11]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p11_die]"}]
-execute as @a[tag=p12_die,team=apex] if entity @a[tag=p12_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p12]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p12_die]"}]
 
+#kills no headshot
+execute as @a[tag=p1_die,tag=!p1_headshot,team=apex] if entity @a[tag=p1_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p1]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p1_die]"}]
+execute as @a[tag=p2_die,tag=!p2_headshot,team=apex] if entity @a[tag=p2_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p2]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p2_die]"}]
+execute as @a[tag=p3_die,tag=!p3_headshot,team=apex] if entity @a[tag=p3_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p3]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p3_die]"}]
+execute as @a[tag=p4_die,tag=!p4_headshot,team=apex] if entity @a[tag=p4_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p4]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p4_die]"}]
+execute as @a[tag=p5_die,tag=!p5_headshot,team=apex] if entity @a[tag=p5_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p5]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p5_die]"}]
+execute as @a[tag=p6_die,tag=!p6_headshot,team=apex] if entity @a[tag=p6_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p6]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p6_die]"}]
+execute as @a[tag=p7_die,tag=!p7_headshot,team=apex] if entity @a[tag=p7_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p7]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p7_die]"}]
+execute as @a[tag=p8_die,tag=!p8_headshot,team=apex] if entity @a[tag=p8_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p8]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p8_die]"}]
+execute as @a[tag=p9_die,tag=!p9_headshot,team=apex] if entity @a[tag=p9_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p9]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p9_die]"}]
+execute as @a[tag=p10_die,tag=!p10_headshot,team=apex] if entity @a[tag=p10_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p10]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p10_die]"}]
+execute as @a[tag=p11_die,tag=!p11_headshot,team=apex] if entity @a[tag=p11_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p11]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p11_die]"}]
+execute as @a[tag=p12_die,tag=!p12_headshot,team=apex] if entity @a[tag=p12_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p12]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p12_die]"}]
+
+#headshot
+execute as @a[tag=p1_die,tag=p1_headshot,team=apex] if entity @a[tag=p1_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p1]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p1_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p2_die,tag=p2_headshot,team=apex] if entity @a[tag=p2_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p2]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p2_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p3_die,tag=p3_headshot,team=apex] if entity @a[tag=p3_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p3]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p3_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p4_die,tag=p4_headshot,team=apex] if entity @a[tag=p4_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p4]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p4_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p5_die,tag=p5_headshot,team=apex] if entity @a[tag=p5_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p5]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p5_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p6_die,tag=p6_headshot,team=apex] if entity @a[tag=p6_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p6]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p6_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p7_die,tag=p7_headshot,team=apex] if entity @a[tag=p7_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p7]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p7_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p8_die,tag=p8_headshot,team=apex] if entity @a[tag=p8_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p8]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p8_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p9_die,tag=p9_headshot,team=apex] if entity @a[tag=p9_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p9]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p9_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p10_die,tag=p10_headshot,team=apex] if entity @a[tag=p10_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p10]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p10_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p11_die,tag=p11_headshot,team=apex] if entity @a[tag=p11_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p11]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p11_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p12_die,tag=p12_headshot,team=apex] if entity @a[tag=p12_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@p[tag=p12]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p12_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+tag @a remove p1_headshot
+tag @a remove p2_headshot
+tag @a remove p3_headshot
+tag @a remove p4_headshot
+tag @a remove p5_headshot
+tag @a remove p6_headshot
+tag @a remove p7_headshot
+tag @a remove p8_headshot
+tag @a remove p9_headshot
+tag @a remove p10_headshot
+tag @a remove p11_headshot
+tag @a remove p12_headshot
 
 #shutdown
 execute as @a[tag=p1_die,tag=spree1,team=apex] if entity @a[tag=p1_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@s[tag=p1_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p1]"},{"text":"!","color":"aqua"}]
@@ -44,7 +71,7 @@ execute as @a[tag=p9_die,tag=spree1,team=apex] if entity @a[tag=p9_killed,team=a
 execute as @a[tag=p10_die,tag=spree1,team=apex] if entity @a[tag=p10_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@s[tag=p10_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p10]"},{"text":"!","color":"aqua"}]
 execute as @a[tag=p11_die,tag=spree1,team=apex] if entity @a[tag=p11_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@s[tag=p11_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p11]"},{"text":"!","color":"aqua"}]
 execute as @a[tag=p12_die,tag=spree1,team=apex] if entity @a[tag=p12_killed,team=apex] run tellraw @a[team=apex] [{"color":"aqua","selector":"@s[tag=p12_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p12]"},{"text":"!","color":"aqua"}]
-
+#sound
 execute as @a[tag=!spawnProt,tag=p1_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 execute as @a[tag=!spawnProt,tag=p2_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 execute as @a[tag=!spawnProt,tag=p3_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
@@ -58,6 +85,21 @@ execute as @a[tag=!spawnProt,tag=p10_killed,team=apex] at @s run playsound minec
 execute as @a[tag=!spawnProt,tag=p11_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 execute as @a[tag=!spawnProt,tag=p12_killed,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 
+#death fx
+#firework particle
+execute as @a[team=apex,tag=p1_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p2_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p3_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p4_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p5_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p6_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p7_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p8_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p9_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p10_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p11_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+execute as @a[team=apex,tag=p12_die] at @s positioned ~ ~1.5 ~ run summon firework_rocket ~ ~0.6 ~ {Life:0,LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",has_twinkle:false,colors:[I;16776960]}]}}}}
+#sound
 execute as @a[tag=!spawnProt,tag=p1_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 execute as @a[tag=!spawnProt,tag=p2_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 execute as @a[tag=!spawnProt,tag=p3_die,team=apex] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
