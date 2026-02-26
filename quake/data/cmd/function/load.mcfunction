@@ -2,6 +2,34 @@
 execute unless data storage cmd:global Debug run data merge storage cmd:global {Debug:1b}
 scoreboard objectives add debug dummy
 
+team remove ancient
+team remove apex
+team remove apex2
+team remove apex3
+team remove apex4
+team remove coldwar
+team remove coldwar2
+team remove demonic
+team remove demonic2
+team remove digsite
+team remove digsite2
+team remove faarah
+team remove faarah2
+team remove forgotten
+team remove fryst
+team remove hustwood
+team remove hustwood2
+team remove karunesh
+team remove library
+team remove lostworld
+team remove lunarlostworld
+team remove martian
+team remove mines
+team remove sero
+team remove sunken
+team remove town
+team remove woodstone
+team remove wynnic
 
 team add ancient
 team add apex
@@ -57,12 +85,12 @@ scoreboard objectives remove spawnProt.Apex3
 scoreboard objectives remove kills.Apex4
 scoreboard objectives remove respawn.Apex4
 scoreboard objectives remove spawnProt.Apex4
-scoreboard objectives remove kills.Coldwar
-scoreboard objectives remove respawn.Coldwar
-scoreboard objectives remove spawnProt.Coldwar
-scoreboard objectives remove kills.Coldwar2
-scoreboard objectives remove respawn.Coldwar2
-scoreboard objectives remove spawnProt.Coldwar2
+scoreboard objectives remove kills.ColdWar
+scoreboard objectives remove respawn.ColdWar
+scoreboard objectives remove spawnProt.ColdWar
+scoreboard objectives remove kills.ColdWar2
+scoreboard objectives remove respawn.ColdWar2
+scoreboard objectives remove spawnProt.ColdWar2
 scoreboard objectives remove kills.Demonic
 scoreboard objectives remove respawn.Demonic
 scoreboard objectives remove spawnProt.Demonic
@@ -146,12 +174,12 @@ scoreboard objectives add spawnProt.Apex3 dummy
 scoreboard objectives add kills.Apex4 dummy
 scoreboard objectives add respawn.Apex4 dummy
 scoreboard objectives add spawnProt.Apex4 dummy
-scoreboard objectives add kills.Coldwar dummy
-scoreboard objectives add respawn.Coldwar dummy
-scoreboard objectives add spawnProt.Coldwar dummy
-scoreboard objectives add kills.Coldwar2 dummy
-scoreboard objectives add respawn.Coldwar2 dummy
-scoreboard objectives add spawnProt.Coldwar2 dummy
+scoreboard objectives add kills.ColdWar dummy
+scoreboard objectives add respawn.ColdWar dummy
+scoreboard objectives add spawnProt.ColdWar dummy
+scoreboard objectives add kills.ColdWar2 dummy
+scoreboard objectives add respawn.ColdWar2 dummy
+scoreboard objectives add spawnProt.ColdWar2 dummy
 scoreboard objectives add kills.Demonic dummy
 scoreboard objectives add respawn.Demonic dummy
 scoreboard objectives add spawnProt.Demonic dummy
@@ -224,8 +252,8 @@ scoreboard objectives modify kills.Apex displayname [{"bold":true,"color":"yello
 scoreboard objectives modify kills.Apex2 displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
 scoreboard objectives modify kills.Apex3 displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
 scoreboard objectives modify kills.Apex4 displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
-scoreboard objectives modify kills.Coldwar displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
-scoreboard objectives modify kills.Coldwar2 displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
+scoreboard objectives modify kills.ColdWar displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
+scoreboard objectives modify kills.ColdWar2 displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
 scoreboard objectives modify kills.Demonic displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
 scoreboard objectives modify kills.Demonic2 displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
 scoreboard objectives modify kills.Digsite displayname [{"bold":true,"color":"yellow","text":"KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
@@ -255,3 +283,38 @@ scoreboard objectives add kills.Global dummy
 scoreboard objectives add wins.Global dummy
 scoreboard objectives modify kills.Global displayname [{"bold":true,"color":"yellow","text":"LIFETIME KILLS "},{"bold":true,"color":"dark_gray","text":"//"},{"bold":false,"color":"gray","text":" git.new/quakepack"}]
 scoreboard objectives setdisplay sidebar kills.Global
+
+#color tracking
+#lib
+data merge storage cmd:global {colorLib:[{1:"sidebar.team.black"},{2:"sidebar.team.dark_blue"},{3:"sidebar.team.dark_green"},{4:"sidebar.team.dark_aqua"},{5:"sidebar.team.dark_red"},{6:"sidebar.team.dark_purple"},{7:"sidebar.team.gold"},{8:"sidebar.team.gray"},{9:"sidebar.team.dark_gray"},{10:"sidebar.team.blue"},{11:"sidebar.team.green"},{12:"sidebar.team.aqua"},{13:"sidebar.team.red"},{14:"sidebar.team.light_purple"},{15:"sidebar.team.yellow"},{16:"sidebar.team.white"}]}
+#scoreboard tracker
+scoreboard objectives remove color.Global
+scoreboard objectives add color.Global dummy
+scoreboard players set ancient color.Global 0
+scoreboard players set apex color.Global 0
+scoreboard players set apex2 color.Global 0
+scoreboard players set apex3 color.Global 0
+scoreboard players set apex4 color.Global 0
+scoreboard players set coldwar color.Global 0
+scoreboard players set coldwar2 color.Global 0
+scoreboard players set demonic color.Global 0
+scoreboard players set demonic2 color.Global 0
+scoreboard players set digsite color.Global 0
+scoreboard players set digsite2 color.Global 0
+scoreboard players set faarah color.Global 0
+scoreboard players set faarah2 color.Global 0
+scoreboard players set forgotten color.Global 0
+scoreboard players set fryst color.Global 0
+scoreboard players set hustwood color.Global 0
+scoreboard players set hustwood2 color.Global 0
+scoreboard players set karunesh color.Global 0
+scoreboard players set library color.Global 0
+scoreboard players set lostworld color.Global 0
+scoreboard players set lunarlostworld color.Global 0
+scoreboard players set martian color.Global 0
+scoreboard players set mines color.Global 0
+scoreboard players set sero color.Global 0
+scoreboard players set sunken color.Global 0
+scoreboard players set town color.Global 0
+scoreboard players set woodstone color.Global 0
+scoreboard players set wynnic color.Global 0

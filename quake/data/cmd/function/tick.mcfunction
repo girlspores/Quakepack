@@ -1,11 +1,32 @@
 #fl
+#ancient
 forceload add 25 24 -11 -8
+#apex
 forceload add 634 -111 382 101
-
-
-
-
-
+#apex2
+forceload add 1043 -46 956 40
+#apex3
+forceload add 1533 -41 1462 36
+#coldwar
+forceload add 1953 47 2043 -44
+#demonic
+forceload add 2545 37 2455 -37
+#digsite
+forceload add 2963 37 3037 -38
+#digsite2
+forceload add 3456 -68 3544 68
+#faarah
+forceload add 4037 -39 3974 29
+#forgotten
+forceload add 4457 -41 4540 41
+#fryst
+forceload add 4947 35 5048 -51
+#hustwood
+forceload add 5554 38 5447 -44
+#karunesh
+forceload add 6041 -44 5951 46
+#lostworld
+forceload add 7040 -41 6960 41
 
 
 #map manager
@@ -34,8 +55,8 @@ execute as @e[type=interaction] at @s unless entity @p[distance=..40] run kill @
 #scoreboard objectives modify kills.Apex2 displayname
 #scoreboard objectives modify kills.Apex3 displayname
 #scoreboard objectives modify kills.Apex4 displayname
-#scoreboard objectives modify kills.Coldwar displayname
-#scoreboard objectives modify kills.Coldwar2 displayname
+#scoreboard objectives modify kills.ColdWar displayname
+#scoreboard objectives modify kills.ColdWar2 displayname
 #scoreboard objectives modify kills.Demonic displayname
 #scoreboard objectives modify kills.Demonic2 displayname
 #scoreboard objectives modify kills.Digsite displayname
@@ -61,85 +82,93 @@ execute as @e[type=interaction] at @s unless entity @p[distance=..40] run kill @
 
 
 #leaderboard update
-execute as @a run scoreboard players add @s kills.Global 0
-execute as @a run scoreboard players add @s killsSort.Global 0
-execute as @a run scoreboard players operation @s killsSort.Global = @s kills.Global
-# Copy kills to scratch
-execute as @a run scoreboard players operation @s killsSort.Global = @s kills.Global
+#execute as @a run scoreboard players add @s kills.Global 0
+#execute as @a run scoreboard players add @s killsSort.Global 0
+#execute as @a run scoreboard players operation @s killsSort.Global = @s kills.Global
+## Copy kills to scratch
+#execute as @a run scoreboard players operation @s killsSort.Global = @s kills.Global
+#
+## Clear rank tags
+#tag @a remove rank1
+#tag @a remove rank2
+#tag @a remove rank3
+#tag @a remove rank4
+#tag @a remove rank5
+#tag @a remove rank6
+#tag @a remove rank7
+#tag @a remove rank8
+#tag @a remove rank9
+#tag @a remove rank10
+#
+## Rank 1
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a if score @s killsSort.Global = #max killsSort.Global run tag @s add rank1
+#
+## Rank 2
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank2
+#
+## Rank 3
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1,tag=!rank2] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1,tag=!rank2] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank3
+#
+## Rank 4
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank4
+#
+## Rank 5
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank5
+#
+## Rank 6
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank6
+#
+## Rank 7
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank7
+#
+## Rank 8
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank8
+#
+## Rank 9
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7,tag=!rank8] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7,tag=!rank8] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank9
+#
+## Rank 10
+#scoreboard players set #max killsSort.Global -2147483648
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7,tag=!rank8,tag=!rank9] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
+#execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7,tag=!rank8,tag=!rank9] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank10
+#
+##store lb names
+#execute as @p[tag=rank1] at @s run function idyt_033:store_name
+#execute as @p[tag=rank2] at @s run function idyt_033:store_name
+#execute as @p[tag=rank3] at @s run function idyt_033:store_name
+#execute as @p[tag=rank4] at @s run function idyt_033:store_name
+#execute as @p[tag=rank5] at @s run function idyt_033:store_name
+#execute as @p[tag=rank6] at @s run function idyt_033:store_name
+#execute as @p[tag=rank7] at @s run function idyt_033:store_name
+#execute as @p[tag=rank8] at @s run function idyt_033:store_name
+#execute as @p[tag=rank9] at @s run function idyt_033:store_name
+#execute as @p[tag=rank10] at @s run function idyt_033:store_name
 
-# Clear rank tags
-tag @a remove rank1
-tag @a remove rank2
-tag @a remove rank3
-tag @a remove rank4
-tag @a remove rank5
-tag @a remove rank6
-tag @a remove rank7
-tag @a remove rank8
-tag @a remove rank9
-tag @a remove rank10
-
-# Rank 1
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a if score @s killsSort.Global = #max killsSort.Global run tag @s add rank1
-
-# Rank 2
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank2
-
-# Rank 3
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1,tag=!rank2] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1,tag=!rank2] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank3
-
-# Rank 4
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank4
-
-# Rank 5
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank5
-
-# Rank 6
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank6
-
-# Rank 7
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank7
-
-# Rank 8
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank8
-
-# Rank 9
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7,tag=!rank8] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7,tag=!rank8] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank9
-
-# Rank 10
-scoreboard players set #max killsSort.Global -2147483648
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7,tag=!rank8,tag=!rank9] run scoreboard players operation #max killsSort.Global > @s killsSort.Global
-execute as @a[tag=!rank1,tag=!rank2,tag=!rank3,tag=!rank4,tag=!rank5,tag=!rank6,tag=!rank7,tag=!rank8,tag=!rank9] if score @s killsSort.Global = #max killsSort.Global run tag @s add rank10
-
-#store lb names
-execute as @p[tag=rank1] at @s run function idyt_033:store_name
-execute as @p[tag=rank2] at @s run function idyt_033:store_name
-execute as @p[tag=rank3] at @s run function idyt_033:store_name
-execute as @p[tag=rank4] at @s run function idyt_033:store_name
-execute as @p[tag=rank5] at @s run function idyt_033:store_name
-execute as @p[tag=rank6] at @s run function idyt_033:store_name
-execute as @p[tag=rank7] at @s run function idyt_033:store_name
-execute as @p[tag=rank8] at @s run function idyt_033:store_name
-execute as @p[tag=rank9] at @s run function idyt_033:store_name
-execute as @p[tag=rank10] at @s run function idyt_033:store_name
+#persistent leaderboard (online + offline)
+execute unless data storage cmd:global lb_init run scoreboard objectives add killsSort.Global dummy
+execute unless data storage cmd:global lb_init run data merge storage cmd:global {lb_init:1b}
+execute unless data storage cmd:global lb run data merge storage cmd:global {lb:{rank1:{name:"",kills:-2147483648,profile:{name:""}},rank2:{name:"",kills:-2147483648,profile:{name:""}},rank3:{name:"",kills:-2147483648,profile:{name:""}},rank4:{name:"",kills:-2147483648,profile:{name:""}},rank5:{name:"",kills:-2147483648,profile:{name:""}},rank6:{name:"",kills:-2147483648,profile:{name:""}},rank7:{name:"",kills:-2147483648,profile:{name:""}},rank8:{name:"",kills:-2147483648,profile:{name:""}},rank9:{name:"",kills:-2147483648,profile:{name:""}},rank10:{name:"",kills:-2147483648,profile:{name:""}},candidate:{name:"",kills:-2147483648,profile:{name:""}},swap:{name:"",kills:-2147483648,profile:{name:""}}}}
+execute unless data storage cmd:global lb_seeded run function cmd:lb/seed_sidebar
+execute unless data storage cmd:global lb_seeded run data merge storage cmd:global {lb_seeded:1b}
+execute as @a run function cmd:lb/process_player
 
 #update lb names
 data merge entity @e[type=text_display,limit=1,tag=lb1_name] {text:'[{"bold":false,"color":"#77FF00","text":"#1. "},{"block":"-2397 46 731","bold":false,"color":"aqua","nbt":"profile.name"}]'}
@@ -154,29 +183,79 @@ data merge entity @e[type=text_display,limit=1,tag=lb9_name] {text:'[{"bold":fal
 data merge entity @e[type=text_display,limit=1,tag=lb10_name] {text:'[{"bold":false,"color":"#FF0000","text":"#10. "},{"block":"-2397 42 741","bold":false,"color":"aqua","nbt":"profile.name"}]'}
 
 #update lb kills
-data merge entity @e[type=text_display,limit=1,tag=lb1_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank1]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb2_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank2]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb3_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank3]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb4_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank4]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb5_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank5]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb6_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank6]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb7_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank7]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb8_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank8]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb9_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank9]","objective":"kills.Global"}}'}
-data merge entity @e[type=text_display,limit=1,tag=lb10_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank10]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb1_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank1]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb2_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank2]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb3_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank3]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb4_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank4]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb5_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank5]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb6_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank6]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb7_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank7]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb8_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank8]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb9_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank9]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb10_kills] {text:'{"color":"green","score":{"name":"@a[tag=rank10]","objective":"kills.Global"}}'}
+#data merge entity @e[type=text_display,limit=1,tag=lb1_kills] {text:'[{"color":"green","nbt":"lb.rank1.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb2_kills] {text:'[{"color":"green","nbt":"lb.rank2.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb3_kills] {text:'[{"color":"green","nbt":"lb.rank3.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb4_kills] {text:'[{"color":"green","nbt":"lb.rank4.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb5_kills] {text:'[{"color":"green","nbt":"lb.rank5.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb6_kills] {text:'[{"color":"green","nbt":"lb.rank6.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb7_kills] {text:'[{"color":"green","nbt":"lb.rank7.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb8_kills] {text:'[{"color":"green","nbt":"lb.rank8.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb9_kills] {text:'[{"color":"green","nbt":"lb.rank9.kills","storage":"cmd:global"}]'}
+#data merge entity @e[type=text_display,limit=1,tag=lb10_kills] {text:'[{"color":"green","nbt":"lb.rank10.kills","storage":"cmd:global"}]'}
+execute store result score #lb1_display killsSort.Global run data get storage cmd:global lb.rank1.kills 1
+execute store result score #lb2_display killsSort.Global run data get storage cmd:global lb.rank2.kills 1
+execute store result score #lb3_display killsSort.Global run data get storage cmd:global lb.rank3.kills 1
+execute store result score #lb4_display killsSort.Global run data get storage cmd:global lb.rank4.kills 1
+execute store result score #lb5_display killsSort.Global run data get storage cmd:global lb.rank5.kills 1
+execute store result score #lb6_display killsSort.Global run data get storage cmd:global lb.rank6.kills 1
+execute store result score #lb7_display killsSort.Global run data get storage cmd:global lb.rank7.kills 1
+execute store result score #lb8_display killsSort.Global run data get storage cmd:global lb.rank8.kills 1
+execute store result score #lb9_display killsSort.Global run data get storage cmd:global lb.rank9.kills 1
+execute store result score #lb10_display killsSort.Global run data get storage cmd:global lb.rank10.kills 1
+execute if score #lb1_display killsSort.Global matches -2147483648 run scoreboard players set #lb1_display killsSort.Global 0
+execute if score #lb2_display killsSort.Global matches -2147483648 run scoreboard players set #lb2_display killsSort.Global 0
+execute if score #lb3_display killsSort.Global matches -2147483648 run scoreboard players set #lb3_display killsSort.Global 0
+execute if score #lb4_display killsSort.Global matches -2147483648 run scoreboard players set #lb4_display killsSort.Global 0
+execute if score #lb5_display killsSort.Global matches -2147483648 run scoreboard players set #lb5_display killsSort.Global 0
+execute if score #lb6_display killsSort.Global matches -2147483648 run scoreboard players set #lb6_display killsSort.Global 0
+execute if score #lb7_display killsSort.Global matches -2147483648 run scoreboard players set #lb7_display killsSort.Global 0
+execute if score #lb8_display killsSort.Global matches -2147483648 run scoreboard players set #lb8_display killsSort.Global 0
+execute if score #lb9_display killsSort.Global matches -2147483648 run scoreboard players set #lb9_display killsSort.Global 0
+execute if score #lb10_display killsSort.Global matches -2147483648 run scoreboard players set #lb10_display killsSort.Global 0
+data merge entity @e[type=text_display,limit=1,tag=lb1_kills] {text:'{"color":"green","score":{"name":"#lb1_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb2_kills] {text:'{"color":"green","score":{"name":"#lb2_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb3_kills] {text:'{"color":"green","score":{"name":"#lb3_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb4_kills] {text:'{"color":"green","score":{"name":"#lb4_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb5_kills] {text:'{"color":"green","score":{"name":"#lb5_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb6_kills] {text:'{"color":"green","score":{"name":"#lb6_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb7_kills] {text:'{"color":"green","score":{"name":"#lb7_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb8_kills] {text:'{"color":"green","score":{"name":"#lb8_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb9_kills] {text:'{"color":"green","score":{"name":"#lb9_display","objective":"killsSort.Global"}}'}
+data merge entity @e[type=text_display,limit=1,tag=lb10_kills] {text:'{"color":"green","score":{"name":"#lb10_display","objective":"killsSort.Global"}}'}
 
 
 #update lb heads
-data modify block -2397 46 731 profile set from storage id:data.rank1
-data modify block -2397 46 741 profile set from storage id:data.rank2
-data modify block -2397 45 731 profile set from storage id:data.rank3
-data modify block -2397 45 741 profile set from storage id:data.rank4
-data modify block -2397 44 731 profile set from storage id:data.rank5
-data modify block -2397 44 741 profile set from storage id:data.rank6
-data modify block -2397 43 731 profile set from storage id:data.rank7
-data modify block -2397 43 741 profile set from storage id:data.rank8
-data modify block -2397 42 731 profile set from storage id:data.rank9
-data modify block -2397 42 741 profile set from storage id:data.rank10
+#data modify block -2397 46 731 profile set from storage id:data.rank1
+#data modify block -2397 46 741 profile set from storage id:data.rank2
+#data modify block -2397 45 731 profile set from storage id:data.rank3
+#data modify block -2397 45 741 profile set from storage id:data.rank4
+#data modify block -2397 44 731 profile set from storage id:data.rank5
+#data modify block -2397 44 741 profile set from storage id:data.rank6
+#data modify block -2397 43 731 profile set from storage id:data.rank7
+#data modify block -2397 43 741 profile set from storage id:data.rank8
+#data modify block -2397 42 731 profile set from storage id:data.rank9
+#data modify block -2397 42 741 profile set from storage id:data.rank10
+data modify block -2397 46 731 profile set from storage cmd:global lb.rank1.profile
+data modify block -2397 46 741 profile set from storage cmd:global lb.rank2.profile
+data modify block -2397 45 731 profile set from storage cmd:global lb.rank3.profile
+data modify block -2397 45 741 profile set from storage cmd:global lb.rank4.profile
+data modify block -2397 44 731 profile set from storage cmd:global lb.rank5.profile
+data modify block -2397 44 741 profile set from storage cmd:global lb.rank6.profile
+data modify block -2397 43 731 profile set from storage cmd:global lb.rank7.profile
+data modify block -2397 43 741 profile set from storage cmd:global lb.rank8.profile
+data modify block -2397 42 731 profile set from storage cmd:global lb.rank9.profile
+data modify block -2397 42 741 profile set from storage cmd:global lb.rank10.profile
 
 
 #gun int cleanup

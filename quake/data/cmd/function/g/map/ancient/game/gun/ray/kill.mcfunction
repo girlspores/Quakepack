@@ -217,6 +217,19 @@ execute as @a[tag=p10_die,team=ancient] at @s run scoreboard players add @p[tag=
 execute as @a[tag=p11_die,team=ancient] at @s run scoreboard players add @p[tag=p11,team=ancient] kills.Ancient 1
 execute as @a[tag=p12_die,team=ancient] at @s run scoreboard players add @p[tag=p12,team=ancient] kills.Ancient 1
 
+execute as @a[tag=p1_die,team=ancient] at @s run scoreboard players add @p[tag=p1,team=ancient] kills.Global 1
+execute as @a[tag=p2_die,team=ancient] at @s run scoreboard players add @p[tag=p2,team=ancient] kills.Global 1
+execute as @a[tag=p3_die,team=ancient] at @s run scoreboard players add @p[tag=p3,team=ancient] kills.Global 1
+execute as @a[tag=p4_die,team=ancient] at @s run scoreboard players add @p[tag=p4,team=ancient] kills.Global 1
+execute as @a[tag=p5_die,team=ancient] at @s run scoreboard players add @p[tag=p5,team=ancient] kills.Global 1
+execute as @a[tag=p6_die,team=ancient] at @s run scoreboard players add @p[tag=p6,team=ancient] kills.Global 1
+execute as @a[tag=p7_die,team=ancient] at @s run scoreboard players add @p[tag=p7,team=ancient] kills.Global 1
+execute as @a[tag=p8_die,team=ancient] at @s run scoreboard players add @p[tag=p8,team=ancient] kills.Global 1
+execute as @a[tag=p9_die,team=ancient] at @s run scoreboard players add @p[tag=p9,team=ancient] kills.Global 1
+execute as @a[tag=p10_die,team=ancient] at @s run scoreboard players add @p[tag=p10,team=ancient] kills.Global 1
+execute as @a[tag=p11_die,team=ancient] at @s run scoreboard players add @p[tag=p11,team=ancient] kills.Global 1
+execute as @a[tag=p12_die,team=ancient] at @s run scoreboard players add @p[tag=p12,team=ancient] kills.Global 1
+
 tag @a[team=ancient] remove p1_killed
 tag @a[team=ancient] remove p1_die
 tag @a[team=ancient] remove p2_killed

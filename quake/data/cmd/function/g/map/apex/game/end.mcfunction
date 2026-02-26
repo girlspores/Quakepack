@@ -19,7 +19,7 @@ kill @e[team=apex,type=interaction]
 schedule function cmd:g/map/lobby/warp 7.5s
 
 #log stats
-execute as @a[team=apex] at @s run scoreboard players operation @s kills.Global += @s kills.Apex
+#execute as @a[team=apex] at @s run scoreboard players operation @s kills.Global += @s kills.Apex
 execute as @a[team=apex] at @s if score @s kills.Apex matches 25..50 run scoreboard players add @s wins.Global 1
 
 #reset sprees
@@ -109,6 +109,7 @@ execute as @a[tag=ending,tag=apex_rank1] at @s run summon firework_rocket ~ ~ ~ 
 execute as @a[tag=ending,tag=apex_rank1] at @s run summon firework_rocket ~ ~ ~ {Life:0,LifeTime:20,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"star",has_twinkle:true,colors:[I;16777215],fade_colors:[I;0]}]}}}}
 
 
+scoreboard players set apex color.Global 0
 
 
 schedule function cmd:g/map/apex/game/end2 1s
