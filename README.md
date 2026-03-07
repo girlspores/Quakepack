@@ -11,7 +11,7 @@ A faithful rewrite of Hypixel's minigame Quakecraft in .mcfunction
 ## CREDITS
 ### Core concept
   - Hypixel's `Quakecraft` [Wiki page](https://hypixel.fandom.com/wiki/Quakecraft)
-### Main lobby and 22/26 maps
+### Main lobby and 22/28 maps
   - Hypixel's `Quakecraft` [Wiki page](https://hypixel.fandom.com/wiki/Category:Quakecraft_Maps)
 ### Motion library to make Dash possible without mods
   - @MulverineX & @SuperSwordTW's `Player Motion` datapack (successor to [`Delta`](https://github.com/BigPapi13/Delta))  [Modrinth page](https://modrinth.com/datapack/player_motion?version=1.21)
