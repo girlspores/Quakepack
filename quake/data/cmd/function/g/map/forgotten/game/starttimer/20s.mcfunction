@@ -1,0 +1,2 @@
+tellraw @a[team=forgotten] [{"text":"The game starts in ","color":"yellow"},{"text":"20 ","color":"yellow"},{"text":"seconds!","color":"yellow"}]
+execute as @a[team=forgotten] at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 100

@@ -101,7 +101,7 @@ tag @a[tag=ending] remove p10
 tag @a[tag=ending] remove p11
 tag @a[tag=ending] remove p12
 
-effect clear @a
+effect clear @a[tag=ending]
 
 execute as @a[team=] run scoreboard objectives setdisplay sidebar kills.Global
 
@@ -111,7 +111,7 @@ scoreboard players reset @a[tag=ending] kills.Apex2
 scoreboard players reset @a[tag=ending] kills.Apex3
 scoreboard players reset @a[tag=ending] kills.Apex4
 scoreboard players reset @a[tag=ending] kills.ColdWar
-scoreboard players reset @a[tag=ending] kills.ColdWar2
+scoreboard players reset @a[tag=ending] kills.Rift
 scoreboard players reset @a[tag=ending] kills.Demonic
 scoreboard players reset @a[tag=ending] kills.Demonic2
 scoreboard players reset @a[tag=ending] kills.Digsite
@@ -133,5 +133,5 @@ scoreboard players reset @a[tag=ending] kills.Sunken
 scoreboard players reset @a[tag=ending] kills.Town
 scoreboard players reset @a[tag=ending] kills.Woodstone
 scoreboard players reset @a[tag=ending] kills.Wynnic
-
+clear @a[tag=ending]
 tag @a remove ending

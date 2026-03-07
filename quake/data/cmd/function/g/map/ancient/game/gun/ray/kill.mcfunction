@@ -1,17 +1,17 @@
 
 #clean marker rays
-#execute if entity @p[tag=p1_killed] run kill @e[tag=ray,tag=p1]
-#execute if entity @p[tag=p2_killed] run kill @e[tag=ray,tag=p2]
-#execute if entity @p[tag=p3_killed] run kill @e[tag=ray,tag=p3]
-#execute if entity @p[tag=p4_killed] run kill @e[tag=ray,tag=p4]
-#execute if entity @p[tag=p5_killed] run kill @e[tag=ray,tag=p5]
-#execute if entity @p[tag=p6_killed] run kill @e[tag=ray,tag=p6]
-#execute if entity @p[tag=p7_killed] run kill @e[tag=ray,tag=p7]
-#execute if entity @p[tag=p8_killed] run kill @e[tag=ray,tag=p8]
-#execute if entity @p[tag=p9_killed] run kill @e[tag=ray,tag=p9]
-#execute if entity @p[tag=p10_killed] run kill @e[tag=ray,tag=p10]
-#execute if entity @p[tag=p11_killed] run kill @e[tag=ray,tag=p11]
-#execute if entity @p[tag=p12_killed] run kill @e[tag=ray,tag=p12]
+#execute if entity @p[tag=p1_killed] run kill @e[tag=ray,tag=ancient,tag=p1]
+#execute if entity @p[tag=p2_killed] run kill @e[tag=ray,tag=ancient,tag=p2]
+#execute if entity @p[tag=p3_killed] run kill @e[tag=ray,tag=ancient,tag=p3]
+#execute if entity @p[tag=p4_killed] run kill @e[tag=ray,tag=ancient,tag=p4]
+#execute if entity @p[tag=p5_killed] run kill @e[tag=ray,tag=ancient,tag=p5]
+#execute if entity @p[tag=p6_killed] run kill @e[tag=ray,tag=ancient,tag=p6]
+#execute if entity @p[tag=p7_killed] run kill @e[tag=ray,tag=ancient,tag=p7]
+#execute if entity @p[tag=p8_killed] run kill @e[tag=ray,tag=ancient,tag=p8]
+#execute if entity @p[tag=p9_killed] run kill @e[tag=ray,tag=ancient,tag=p9]
+#execute if entity @p[tag=p10_killed] run kill @e[tag=ray,tag=ancient,tag=p10]
+#execute if entity @p[tag=p11_killed] run kill @e[tag=ray,tag=ancient,tag=p11]
+#execute if entity @p[tag=p12_killed] run kill @e[tag=ray,tag=ancient,tag=p12]
 # messages for players p1 through p12
 #execute as @p[tag=p1_killed] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
 #execute as @p[tag=p2_killed] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
@@ -19,32 +19,32 @@
 #execute as @p[tag=p2_die] run tellraw @a [{"selector":"@s"},{"entity":"@s","nbt":"Tags"}]
 
 #kills no headshot
-execute as @a[tag=p1_die,tag=!p1_headshot,team=ancient] if entity @a[tag=p1_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p1]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p1_die]"}]
-execute as @a[tag=p2_die,tag=!p2_headshot,team=ancient] if entity @a[tag=p2_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p2]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p2_die]"}]
-execute as @a[tag=p3_die,tag=!p3_headshot,team=ancient] if entity @a[tag=p3_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p3]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p3_die]"}]
-execute as @a[tag=p4_die,tag=!p4_headshot,team=ancient] if entity @a[tag=p4_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p4]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p4_die]"}]
-execute as @a[tag=p5_die,tag=!p5_headshot,team=ancient] if entity @a[tag=p5_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p5]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p5_die]"}]
-execute as @a[tag=p6_die,tag=!p6_headshot,team=ancient] if entity @a[tag=p6_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p6]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p6_die]"}]
-execute as @a[tag=p7_die,tag=!p7_headshot,team=ancient] if entity @a[tag=p7_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p7]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p7_die]"}]
-execute as @a[tag=p8_die,tag=!p8_headshot,team=ancient] if entity @a[tag=p8_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p8]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p8_die]"}]
-execute as @a[tag=p9_die,tag=!p9_headshot,team=ancient] if entity @a[tag=p9_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p9]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p9_die]"}]
-execute as @a[tag=p10_die,tag=!p10_headshot,team=ancient] if entity @a[tag=p10_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p10]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p10_die]"}]
-execute as @a[tag=p11_die,tag=!p11_headshot,team=ancient] if entity @a[tag=p11_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p11]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p11_die]"}]
-execute as @a[tag=p12_die,tag=!p12_headshot,team=ancient] if entity @a[tag=p12_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p12]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p12_die]"}]
+execute as @a[tag=p1_die,tag=!p1_headshot,team=ancient] if entity @a[tag=p1_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p1,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p1_die,team=ancient]"}]
+execute as @a[tag=p2_die,tag=!p2_headshot,team=ancient] if entity @a[tag=p2_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p2,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p2_die,team=ancient]"}]
+execute as @a[tag=p3_die,tag=!p3_headshot,team=ancient] if entity @a[tag=p3_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p3,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p3_die,team=ancient]"}]
+execute as @a[tag=p4_die,tag=!p4_headshot,team=ancient] if entity @a[tag=p4_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p4,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p4_die,team=ancient]"}]
+execute as @a[tag=p5_die,tag=!p5_headshot,team=ancient] if entity @a[tag=p5_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p5,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p5_die,team=ancient]"}]
+execute as @a[tag=p6_die,tag=!p6_headshot,team=ancient] if entity @a[tag=p6_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p6,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p6_die,team=ancient]"}]
+execute as @a[tag=p7_die,tag=!p7_headshot,team=ancient] if entity @a[tag=p7_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p7,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p7_die,team=ancient]"}]
+execute as @a[tag=p8_die,tag=!p8_headshot,team=ancient] if entity @a[tag=p8_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p8,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p8_die,team=ancient]"}]
+execute as @a[tag=p9_die,tag=!p9_headshot,team=ancient] if entity @a[tag=p9_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p9,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p9_die,team=ancient]"}]
+execute as @a[tag=p10_die,tag=!p10_headshot,team=ancient] if entity @a[tag=p10_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p10,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p10_die,team=ancient]"}]
+execute as @a[tag=p11_die,tag=!p11_headshot,team=ancient] if entity @a[tag=p11_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p11,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p11_die,team=ancient]"}]
+execute as @a[tag=p12_die,tag=!p12_headshot,team=ancient] if entity @a[tag=p12_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p12,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p12_die,team=ancient]"}]
 
 #headshot
-execute as @a[tag=p1_die,tag=p1_headshot,team=ancient] if entity @a[tag=p1_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p1]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p1_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p2_die,tag=p2_headshot,team=ancient] if entity @a[tag=p2_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p2]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p2_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p3_die,tag=p3_headshot,team=ancient] if entity @a[tag=p3_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p3]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p3_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p4_die,tag=p4_headshot,team=ancient] if entity @a[tag=p4_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p4]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p4_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p5_die,tag=p5_headshot,team=ancient] if entity @a[tag=p5_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p5]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p5_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p6_die,tag=p6_headshot,team=ancient] if entity @a[tag=p6_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p6]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p6_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p7_die,tag=p7_headshot,team=ancient] if entity @a[tag=p7_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p7]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p7_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p8_die,tag=p8_headshot,team=ancient] if entity @a[tag=p8_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p8]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p8_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p9_die,tag=p9_headshot,team=ancient] if entity @a[tag=p9_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p9]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p9_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p10_die,tag=p10_headshot,team=ancient] if entity @a[tag=p10_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p10]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p10_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p11_die,tag=p11_headshot,team=ancient] if entity @a[tag=p11_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p11]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p11_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
-execute as @a[tag=p12_die,tag=p12_headshot,team=ancient] if entity @a[tag=p12_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p12]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p12_die]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p1_die,tag=p1_headshot,team=ancient] if entity @a[tag=p1_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p1,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p1_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p2_die,tag=p2_headshot,team=ancient] if entity @a[tag=p2_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p2,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p2_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p3_die,tag=p3_headshot,team=ancient] if entity @a[tag=p3_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p3,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p3_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p4_die,tag=p4_headshot,team=ancient] if entity @a[tag=p4_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p4,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p4_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p5_die,tag=p5_headshot,team=ancient] if entity @a[tag=p5_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p5,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p5_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p6_die,tag=p6_headshot,team=ancient] if entity @a[tag=p6_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p6,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p6_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p7_die,tag=p7_headshot,team=ancient] if entity @a[tag=p7_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p7,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p7_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p8_die,tag=p8_headshot,team=ancient] if entity @a[tag=p8_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p8,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p8_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p9_die,tag=p9_headshot,team=ancient] if entity @a[tag=p9_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p9,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p9_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p10_die,tag=p10_headshot,team=ancient] if entity @a[tag=p10_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p10,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p10_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p11_die,tag=p11_headshot,team=ancient] if entity @a[tag=p11_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p11,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p11_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
+execute as @a[tag=p12_die,tag=p12_headshot,team=ancient] if entity @a[tag=p12_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@p[tag=p12,team=ancient]"},{"color":"gray","text":" gibbed "},{"color":"aqua","selector":"@s[tag=p12_die,team=ancient]"},{"text":" HEADSHOT","color":"yellow","bold":true}]
 tag @a remove p1_headshot
 tag @a remove p2_headshot
 tag @a remove p3_headshot
@@ -59,18 +59,18 @@ tag @a remove p11_headshot
 tag @a remove p12_headshot
 
 #shutdown
-execute as @a[tag=p1_die,tag=spree1,team=ancient] if entity @a[tag=p1_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p1_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p1]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p2_die,tag=spree1,team=ancient] if entity @a[tag=p2_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p2_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p2]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p3_die,tag=spree1,team=ancient] if entity @a[tag=p3_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p3_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p3]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p4_die,tag=spree1,team=ancient] if entity @a[tag=p4_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p4_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p4]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p5_die,tag=spree1,team=ancient] if entity @a[tag=p5_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p5_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p5]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p6_die,tag=spree1,team=ancient] if entity @a[tag=p6_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p6_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p6]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p7_die,tag=spree1,team=ancient] if entity @a[tag=p7_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p7_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p7]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p8_die,tag=spree1,team=ancient] if entity @a[tag=p8_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p8_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p8]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p9_die,tag=spree1,team=ancient] if entity @a[tag=p9_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p9_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p9]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p10_die,tag=spree1,team=ancient] if entity @a[tag=p10_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p10_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p10]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p11_die,tag=spree1,team=ancient] if entity @a[tag=p11_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p11_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p11]"},{"text":"!","color":"aqua"}]
-execute as @a[tag=p12_die,tag=spree1,team=ancient] if entity @a[tag=p12_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p12_die]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p12]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p1_die,tag=spree1,team=ancient] if entity @a[tag=p1_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p1_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p1,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p2_die,tag=spree1,team=ancient] if entity @a[tag=p2_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p2_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p2,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p3_die,tag=spree1,team=ancient] if entity @a[tag=p3_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p3_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p3,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p4_die,tag=spree1,team=ancient] if entity @a[tag=p4_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p4_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p4,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p5_die,tag=spree1,team=ancient] if entity @a[tag=p5_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p5_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p5,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p6_die,tag=spree1,team=ancient] if entity @a[tag=p6_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p6_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p6,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p7_die,tag=spree1,team=ancient] if entity @a[tag=p7_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p7_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p7,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p8_die,tag=spree1,team=ancient] if entity @a[tag=p8_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p8_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p8,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p9_die,tag=spree1,team=ancient] if entity @a[tag=p9_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p9_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p9,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p10_die,tag=spree1,team=ancient] if entity @a[tag=p10_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p10_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p10,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p11_die,tag=spree1,team=ancient] if entity @a[tag=p11_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p11_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p11,team=ancient]"},{"text":"!","color":"aqua"}]
+execute as @a[tag=p12_die,tag=spree1,team=ancient] if entity @a[tag=p12_killed,team=ancient] run tellraw @a[team=ancient] [{"color":"aqua","selector":"@s[tag=p12_die,team=ancient]"},{"color":"aqua","text":" got shutdown by ","italic":true},{"color":"aqua","selector":"@p[tag=p12,team=ancient]"},{"text":"!","color":"aqua"}]
 #sound
 execute as @a[tag=!spawnProt,tag=p1_killed,team=ancient] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
 execute as @a[tag=!spawnProt,tag=p2_killed,team=ancient] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 0.5 1
@@ -256,4 +256,90 @@ tag @a[team=ancient] remove p12_killed
 tag @a[team=ancient] remove p12_die
 
 #execute as @a at @s if score @s kills.Ancient matches 25..30 run tellraw @a [{"selector":"@s","color":"aqua"},{"text":" wins!","color":"green"}]
-execute as @a at @s if score @s kills.Ancient matches 25.. run function cmd:g/map/ancient/game/end
+execute as @a at @s if score @s kills.Ancient matches 25.. run schedule function cmd:g/map/ancient/game/end 1t
+
+#multi-kill tracking
+execute as @a[tag=p1_die,team=ancient] if score @p[tag=p1,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p1,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p1_die,team=ancient] if score @p[tag=p1,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p1,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p1_die,team=ancient] run scoreboard players set @p[tag=p1,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p1_die,team=ancient] if score @p[tag=p1,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p1,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p1_die,team=ancient] if score @p[tag=p1,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p1,team=ancient] ultrakills.Global 1
+execute as @a[tag=p1_die,team=ancient] if score @p[tag=p1,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p1,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p1_die,team=ancient] if score @p[tag=p1,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p1,team=ancient] monsterkills.Global 1
+execute as @a[tag=p2_die,team=ancient] if score @p[tag=p2,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p2,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p2_die,team=ancient] if score @p[tag=p2,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p2,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p2_die,team=ancient] run scoreboard players set @p[tag=p2,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p2_die,team=ancient] if score @p[tag=p2,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p2,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p2_die,team=ancient] if score @p[tag=p2,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p2,team=ancient] ultrakills.Global 1
+execute as @a[tag=p2_die,team=ancient] if score @p[tag=p2,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p2,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p2_die,team=ancient] if score @p[tag=p2,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p2,team=ancient] monsterkills.Global 1
+execute as @a[tag=p3_die,team=ancient] if score @p[tag=p3,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p3,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p3_die,team=ancient] if score @p[tag=p3,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p3,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p3_die,team=ancient] run scoreboard players set @p[tag=p3,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p3_die,team=ancient] if score @p[tag=p3,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p3,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p3_die,team=ancient] if score @p[tag=p3,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p3,team=ancient] ultrakills.Global 1
+execute as @a[tag=p3_die,team=ancient] if score @p[tag=p3,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p3,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p3_die,team=ancient] if score @p[tag=p3,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p3,team=ancient] monsterkills.Global 1
+execute as @a[tag=p4_die,team=ancient] if score @p[tag=p4,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p4,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p4_die,team=ancient] if score @p[tag=p4,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p4,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p4_die,team=ancient] run scoreboard players set @p[tag=p4,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p4_die,team=ancient] if score @p[tag=p4,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p4,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p4_die,team=ancient] if score @p[tag=p4,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p4,team=ancient] ultrakills.Global 1
+execute as @a[tag=p4_die,team=ancient] if score @p[tag=p4,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p4,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p4_die,team=ancient] if score @p[tag=p4,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p4,team=ancient] monsterkills.Global 1
+execute as @a[tag=p5_die,team=ancient] if score @p[tag=p5,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p5,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p5_die,team=ancient] if score @p[tag=p5,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p5,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p5_die,team=ancient] run scoreboard players set @p[tag=p5,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p5_die,team=ancient] if score @p[tag=p5,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p5,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p5_die,team=ancient] if score @p[tag=p5,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p5,team=ancient] ultrakills.Global 1
+execute as @a[tag=p5_die,team=ancient] if score @p[tag=p5,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p5,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p5_die,team=ancient] if score @p[tag=p5,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p5,team=ancient] monsterkills.Global 1
+execute as @a[tag=p6_die,team=ancient] if score @p[tag=p6,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p6,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p6_die,team=ancient] if score @p[tag=p6,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p6,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p6_die,team=ancient] run scoreboard players set @p[tag=p6,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p6_die,team=ancient] if score @p[tag=p6,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p6,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p6_die,team=ancient] if score @p[tag=p6,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p6,team=ancient] ultrakills.Global 1
+execute as @a[tag=p6_die,team=ancient] if score @p[tag=p6,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p6,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p6_die,team=ancient] if score @p[tag=p6,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p6,team=ancient] monsterkills.Global 1
+execute as @a[tag=p7_die,team=ancient] if score @p[tag=p7,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p7,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p7_die,team=ancient] if score @p[tag=p7,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p7,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p7_die,team=ancient] run scoreboard players set @p[tag=p7,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p7_die,team=ancient] if score @p[tag=p7,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p7,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p7_die,team=ancient] if score @p[tag=p7,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p7,team=ancient] ultrakills.Global 1
+execute as @a[tag=p7_die,team=ancient] if score @p[tag=p7,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p7,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p7_die,team=ancient] if score @p[tag=p7,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p7,team=ancient] monsterkills.Global 1
+execute as @a[tag=p8_die,team=ancient] if score @p[tag=p8,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p8,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p8_die,team=ancient] if score @p[tag=p8,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p8,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p8_die,team=ancient] run scoreboard players set @p[tag=p8,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p8_die,team=ancient] if score @p[tag=p8,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p8,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p8_die,team=ancient] if score @p[tag=p8,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p8,team=ancient] ultrakills.Global 1
+execute as @a[tag=p8_die,team=ancient] if score @p[tag=p8,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p8,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p8_die,team=ancient] if score @p[tag=p8,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p8,team=ancient] monsterkills.Global 1
+execute as @a[tag=p9_die,team=ancient] if score @p[tag=p9,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p9,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p9_die,team=ancient] if score @p[tag=p9,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p9,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p9_die,team=ancient] run scoreboard players set @p[tag=p9,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p9_die,team=ancient] if score @p[tag=p9,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p9,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p9_die,team=ancient] if score @p[tag=p9,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p9,team=ancient] ultrakills.Global 1
+execute as @a[tag=p9_die,team=ancient] if score @p[tag=p9,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p9,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p9_die,team=ancient] if score @p[tag=p9,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p9,team=ancient] monsterkills.Global 1
+execute as @a[tag=p10_die,team=ancient] if score @p[tag=p10,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p10,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p10_die,team=ancient] if score @p[tag=p10,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p10,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p10_die,team=ancient] run scoreboard players set @p[tag=p10,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p10_die,team=ancient] if score @p[tag=p10,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p10,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p10_die,team=ancient] if score @p[tag=p10,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p10,team=ancient] ultrakills.Global 1
+execute as @a[tag=p10_die,team=ancient] if score @p[tag=p10,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p10,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p10_die,team=ancient] if score @p[tag=p10,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p10,team=ancient] monsterkills.Global 1
+execute as @a[tag=p11_die,team=ancient] if score @p[tag=p11,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p11,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p11_die,team=ancient] if score @p[tag=p11,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p11,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p11_die,team=ancient] run scoreboard players set @p[tag=p11,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p11_die,team=ancient] if score @p[tag=p11,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p11,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p11_die,team=ancient] if score @p[tag=p11,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p11,team=ancient] ultrakills.Global 1
+execute as @a[tag=p11_die,team=ancient] if score @p[tag=p11,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p11,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p11_die,team=ancient] if score @p[tag=p11,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p11,team=ancient] monsterkills.Global 1
+execute as @a[tag=p12_die,team=ancient] if score @p[tag=p12,team=ancient] mkTimer.Ancient matches 1.. run scoreboard players add @p[tag=p12,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p12_die,team=ancient] if score @p[tag=p12,team=ancient] mkTimer.Ancient matches ..0 run scoreboard players set @p[tag=p12,team=ancient] mkCount.Ancient 1
+execute as @a[tag=p12_die,team=ancient] run scoreboard players set @p[tag=p12,team=ancient] mkTimer.Ancient 60
+execute as @a[tag=p12_die,team=ancient] if score @p[tag=p12,team=ancient] mkCount.Ancient matches 4 run tellraw @a[team=ancient] [{"selector":"@p[tag=p12,team=ancient]","color":"light_purple"},{"text":" ULTRAKILL!","color":"light_purple","bold":true}]
+execute as @a[tag=p12_die,team=ancient] if score @p[tag=p12,team=ancient] mkCount.Ancient matches 4 run scoreboard players add @p[tag=p12,team=ancient] ultrakills.Global 1
+execute as @a[tag=p12_die,team=ancient] if score @p[tag=p12,team=ancient] mkCount.Ancient matches 5.. run tellraw @a[team=ancient] [{"selector":"@p[tag=p12,team=ancient]","color":"red"},{"text":" MONSTER KILL!","color":"red","bold":true}]
+execute as @a[tag=p12_die,team=ancient] if score @p[tag=p12,team=ancient] mkCount.Ancient matches 5.. run scoreboard players add @p[tag=p12,team=ancient] monsterkills.Global 1

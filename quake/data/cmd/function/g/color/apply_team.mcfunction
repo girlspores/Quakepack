@@ -1,0 +1,30 @@
+# Get color name from storage and apply
+execute if entity @s[team=ancient] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"ancient"}
+execute if entity @s[team=apex] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"apex"}
+execute if entity @s[team=apex2] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"apex2"}
+execute if entity @s[team=apex3] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"apex3"}
+execute if entity @s[team=apex4] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"apex4"}
+execute if entity @s[team=coldwar] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"coldwar"}
+execute if entity @s[team=demonic] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"demonic"}
+execute if entity @s[team=demonic2] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"demonic2"}
+execute if entity @s[team=digsite] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"digsite"}
+execute if entity @s[team=digsite2] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"digsite2"}
+execute if entity @s[team=faarah] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"faarah"}
+execute if entity @s[team=faarah2] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"faarah2"}
+execute if entity @s[team=forgotten] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"forgotten"}
+execute if entity @s[team=fryst] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"fryst"}
+execute if entity @s[team=hustwood] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"hustwood"}
+execute if entity @s[team=hustwood2] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"hustwood2"}
+execute if entity @s[team=karunesh] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"karunesh"}
+execute if entity @s[team=library] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"library"}
+execute if entity @s[team=lostworld] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"lostworld"}
+execute if entity @s[team=lunarlostworld] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"lunarlostworld"}
+execute if entity @s[team=martian] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"martian"}
+execute if entity @s[team=mines] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"mines"}
+execute if entity @s[team=rift] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"rift"}
+execute if entity @s[team=sero] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"sero"}
+execute if entity @s[team=sunken] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"sunken"}
+execute if entity @s[team=town] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"town"}
+execute if entity @s[team=woodstone] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"woodstone"}
+execute if entity @s[team=wynnic] run function cmd:g/color/apply_team_color with storage cmd:temp {team:"wynnic"}
+

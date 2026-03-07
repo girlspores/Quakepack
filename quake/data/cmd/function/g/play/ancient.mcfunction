@@ -1,3 +1,7 @@
+
+execute as @s at @s run kill @e[type=item,distance=..100]
+execute if data storage cmd:global {gameState_ancient:1} run tellraw @s {"text":"This game is already in progress. Please choose another map!","color":"red"}
+execute if data storage cmd:global {gameState_ancient:1} run return fail
 # fl
 forceload add 50 37
 forceload add -25 -15
@@ -11,24 +15,21 @@ execute store result storage cmd:temp color.Number int 1 run scoreboard players 
 # Set the map's color in the global tracker
 execute store result score ancient color.Global run data get storage cmd:temp color.Number 1
 
+# Apply dynamic team color and sidebar display
+execute unless entity @p[team=ancient] run function cmd:g/color/apply/ancient
+
 # team
 team leave @s
 team join ancient @s
-
-# Set team color
-team modify ancient color green
-
-# Set sidebar display
-scoreboard objectives setdisplay sidebar.team.green kills.Ancient
+tag @s remove gunCd
+scoreboard players reset @s gunCd.Global
 
 tellraw @a[team=] [{"color":"yellow","selector":"@s"},{"color":"yellow","text":" joined "},{"bold":true,"color":"green","text":"Ancient"},{"bold":false,"color":"green","text":"."}]
 tellraw @a[team=ancient] [{"color":"yellow","selector":"@s"},{"color":"yellow","text":" joined "},{"bold":true,"color":"green","text":"Ancient"},{"bold":false,"color":"green","text":"."}]
 execute as @s at @e[type=marker,tag=ancient,tag=0] run tp @s ~ ~ ~ -90 0
 
 #start timer
-tag @s add join_check_ancient
-execute unless entity @a[team=ancient,tag=!join_check_ancient] run schedule function cmd:g/map/ancient/game/start 5t
-tag @s remove join_check_ancient
+execute if entity @a[team=ancient,tag=p1] unless entity @a[team=ancient,tag=p2] run schedule function cmd:g/map/ancient/game/start 5t
 #player index
 execute as @s[team=ancient,tag=!p1,tag=!p2,tag=!p3,tag=!p4,tag=!p5,tag=!p6,tag=!p7,tag=!p8,tag=!p9,tag=!p10,tag=!p11,tag=!p12] unless entity @p[team=ancient,tag=p1] run tag @s add p1
 execute as @s[team=ancient,tag=!p1,tag=!p2,tag=!p3,tag=!p4,tag=!p5,tag=!p6,tag=!p7,tag=!p8,tag=!p9,tag=!p10,tag=!p11,tag=!p12] unless entity @p[team=ancient,tag=p2] run tag @s add p2
@@ -52,3 +53,5 @@ gamemode adventure @s
 scoreboard objectives add kills.Ancient dummy
 scoreboard objectives add respawn.Ancient dummy
 scoreboard objectives add spawnProt.Ancient dummy
+
+execute as @s at @s run kill @e[type=item,distance=..100]

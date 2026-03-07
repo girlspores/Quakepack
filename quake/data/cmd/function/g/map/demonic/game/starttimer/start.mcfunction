@@ -1,0 +1,10 @@
+tellraw @a[team=demonic] [{"text":"The game starts in ","color":"yellow"},{"text":"30 ","color":"green"},{"text":"seconds!","color":"yellow"}]
+execute as @a[team=demonic] at @s run playsound minecraft:block.note_block.hat master @s ~ ~ ~ 100
+schedule function cmd:g/map/demonic/game/starttimer/20s 10s
+schedule function cmd:g/map/demonic/game/starttimer/10s 20s
+schedule function cmd:g/map/demonic/game/starttimer/5s 25s
+schedule function cmd:g/map/demonic/game/starttimer/4s 26s
+schedule function cmd:g/map/demonic/game/starttimer/3s 27s
+schedule function cmd:g/map/demonic/game/starttimer/2s 28s
+schedule function cmd:g/map/demonic/game/starttimer/1s 29s
+schedule function cmd:g/map/demonic/game/starttimer/0s 30s

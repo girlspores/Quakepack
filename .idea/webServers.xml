@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="030728ed-19be-4459-8c31-54cde5ac73ba" name="Quakepack (Physgun)">
+        <fileTransfer accessType="SFTP" host="chi-s-game-16.physgun.com" port="2022" sshConfigId="69a7cf07-af45-4cea-a089-854d5c9ccb32" sshConfig="Quakepack (Physgun)">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

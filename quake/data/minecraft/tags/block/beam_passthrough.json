@@ -10,6 +10,13 @@
     "#minecraft:wall_signs",
     "#minecraft:all_signs",
     "minecraft:torch",
-    "minecraft:wall_torch"
+    "minecraft:wall_torch",
+    "#minecraft:slabs",
+    "#minecraft:fences",
+    "minecraft:lever",
+    "minecraft:redstone_wire",
+    "#minecraft:rails",
+    "minecraft:light",
+    "minecraft:barrier"
   ]
 }

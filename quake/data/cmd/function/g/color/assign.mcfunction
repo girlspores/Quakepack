@@ -6,7 +6,7 @@ scoreboard players operation #total color.Temp += apex2 color.Global
 scoreboard players operation #total color.Temp += apex3 color.Global
 scoreboard players operation #total color.Temp += apex4 color.Global
 scoreboard players operation #total color.Temp += coldwar color.Global
-scoreboard players operation #total color.Temp += coldwar2 color.Global
+scoreboard players operation #total color.Temp += rift color.Global
 scoreboard players operation #total color.Temp += demonic color.Global
 scoreboard players operation #total color.Temp += demonic2 color.Global
 scoreboard players operation #total color.Temp += digsite color.Global
@@ -34,7 +34,7 @@ scoreboard players operation #next color.Next = #total color.Temp
 scoreboard players add #next color.Next 1
 
 # Special case: if ancient and apex are running, force color #3
-execute if score ancient color.Global matches 1.. if score apex color.Global matches 1.. run scoreboard players set #next color.Next 3
+#execute if score ancient color.Global matches 1.. if score apex color.Global matches 1.. run scoreboard players set #next color.Next 3
 
 # Wrap around if > 16 (though with 28 maps, this might need adjustment)
 execute if score #next color.Next matches 17.. run scoreboard players set #next color.Next 1

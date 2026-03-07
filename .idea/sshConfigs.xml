@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="chi-s-game-16.physgun.com" id="69a7cf07-af45-4cea-a089-854d5c9ccb32" port="2022" customName="Quakepack (Physgun)" nameFormat="CUSTOM" username="gnatdoes@gmail.com.cfb07e54" useOpenSSHConfig="true">
+        <option name="customName" value="Quakepack (Physgun)" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

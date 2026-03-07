@@ -1,1 +1,1 @@
-scoreboard players remove @a dashCd 1
+#scoreboard players remove @a dashCd 1
